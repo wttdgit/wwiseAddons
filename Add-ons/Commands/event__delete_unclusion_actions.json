@@ -1,0 +1,23 @@
+
+{
+   "commands":[
+       {
+           "id":"ak.event.delete_unclusion_actions",
+           "displayName":"Event - delete unclusion action",
+           "defaultShortcut":"",
+           "program":"pyw",
+           "args":"${WwiseProjectRoot}\\Add-ons\\Commands\\event__delete_unclusion_actions.py ${id}",
+           "cwd":"",
+           "redirectOutputs":true,
+           "startMode":"MultipleSelectionSingleProcessSpaceSeparated",
+           "contextMenu":{
+                   "basePath":"Add-ons",
+                   "visibleFor":"Event"
+               },
+           "mainMenu":{
+                   "basePath":""
+               }
+                   
+       }    
+   ]
+}
