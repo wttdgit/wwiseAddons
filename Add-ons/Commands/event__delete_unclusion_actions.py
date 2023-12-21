@@ -1,13 +1,16 @@
 import argparse
 import datetime
 from waapi import WaapiClient
-
 import logging
+import os
+
+log_dir = os.path.join(os.getcwd(), "log"); os.makedirs(log_dir) if not os.path.exists(log_dir) else None
+log_fname = os.path.join(log_dir, datetime.datetime.now().strftime('%Y%m%d%H%M%S.log'))
 
 logging.basicConfig(
     format='%(asctime)s %(levelname)-8s %(message)s',
     level=logging.INFO,
-    filename=datetime.datetime.now().strftime('%Y%m%d%H%M%S.log'),
+    filename=log_fname,
 )
 
 parser = argparse.ArgumentParser(description='Delete non-inclusion actions for selected events')
